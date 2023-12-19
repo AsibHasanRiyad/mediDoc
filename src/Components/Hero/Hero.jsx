@@ -1,6 +1,9 @@
+import Cards from "../Cards/Cards";
+
 const Hero = () => {
   return (
-    <div className=" grid grid-cols-2 justify-between items-center bg-gradient-to-r from-[#FF7594] via-[#FF797B] to-[#FF7C65] rounded-lg">
+   <div className=" col-span-2">
+     <div className=" grid grid-cols-2 justify-between items-center bg-gradient-to-r from-[#FF7594] via-[#FF797B] to-[#FF7C65] rounded-lg">
       <div>
         <img src="/public/assets/Svg_sample1.png" alt="" />
       </div>
@@ -12,6 +15,8 @@ const Hero = () => {
         </p>
       </div>
     </div>
+    <Cards />
+   </div>
   );
 };
 

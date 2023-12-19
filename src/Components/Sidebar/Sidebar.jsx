@@ -5,6 +5,7 @@ import { RiSettings4Line } from "react-icons/ri";
 import { MdHistory } from "react-icons/md";
 import Navbar from "../NavBar/Navbar";
 import Hero from "../Hero/Hero";
+import Appointments from "../Appoinments/Appointments";
 
 const Sidebar = () => {
   const [open, setOpen] = useState(false);
@@ -89,9 +90,12 @@ const Sidebar = () => {
       </div>
 
       {/* Content */}
-      <div className=" bg-[#F9F9F9] w-full pl-[80px] large:ml-0 ">
+      <div className=" bg-[#F9F9F9] w-full pl-[80px] large:ml-0 pr-5 ">
         <Navbar />
-        <Hero />
+        <div className={`grid grid-cols-1 large:grid-cols-3  ${open ? 'gap-6' : 'gap-20'}`}>
+          <Hero />
+          <Appointments />
+        </div>
       </div>
     </div>
   );
