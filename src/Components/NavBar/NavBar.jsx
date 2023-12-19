@@ -3,8 +3,8 @@ import Toggler from "../Toggler/Toggler";
 
 const Navbar = () => {
     return (
-        <div className="flex justify-between items-center p-4">
-          <button className="btn btn-ghost text-xl text-[#646F75]">Home</button>
+        <div className="flex justify-between items-center pr-4 py-4">
+          <button className=" text-xl text-[#646F75]">Home</button>
 
           {/* toggle and profile*/}
           <div className=" flex justify-center item-center gap-3">

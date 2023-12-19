@@ -1,8 +1,9 @@
 import Cards from "../Cards/Cards";
+import ToDo from "../ToDo/ToDo";
 
 const Hero = () => {
   return (
-   <div className=" col-span-2">
+   <div className=" col-span-2 order-1">
      <div className=" grid grid-cols-2 justify-between items-center bg-gradient-to-r from-[#FF7594] via-[#FF797B] to-[#FF7C65] rounded-lg">
       <div>
         <img src="/public/assets/Svg_sample1.png" alt="" />
@@ -16,6 +17,7 @@ const Hero = () => {
       </div>
     </div>
     <Cards />
+    <ToDo />
    </div>
   );
 };

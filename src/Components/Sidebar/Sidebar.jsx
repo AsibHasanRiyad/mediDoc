@@ -90,9 +90,9 @@ const Sidebar = () => {
       </div>
 
       {/* Content */}
-      <div className=" bg-[#F9F9F9] w-full pl-[80px] large:ml-0 pr-5 ">
+      <div className=" bg-[#F9F9F9] w-full pl-[80px] pr-5 ">
         <Navbar />
-        <div className={`grid grid-cols-1 large:grid-cols-3  ${open ? 'gap-6' : 'gap-20'}`}>
+        <div className={`grid grid-cols-1 large:grid-cols-3  ${open ? 'gap-6' : ' gap-0 large:gap-20'}`}>
           <Hero />
           <Appointments />
         </div>
