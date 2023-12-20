@@ -40,7 +40,7 @@ const Appointments = () => {
     },
   ];
   return (
-    <div className=" col-span-2 order-3 large:order-2 mid:mt-10 large:mt-0">
+    <div className="  mid:mt-10 large:mt-0">
         <div className="bg-white shadow p-3 shadow-[#b8b7b7] rounded-md h-[570px] overflow-scroll ">
       <h1>Upcoming Appointments</h1>
       {/* appointments */}

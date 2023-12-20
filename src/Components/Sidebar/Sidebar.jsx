@@ -28,7 +28,7 @@ const Sidebar = () => {
               ? "fixed"
               : "relative",
         }}
-        className={`bg-white min-h-screen relative  duration-300 hidden mid:inline ${
+        className={`bg-white min-h-screen relative  duration-300 z-20 hidden mid:inline ${
           open ? "w-[270px]" : " w-[70px] "
         }`}
       >
@@ -92,17 +92,25 @@ const Sidebar = () => {
       </div>
 
       {/* Content */}
-      <div className=" bg-[#F9F9F9] w-full small:pl-0 mid:pl-[88px] large:pl-[100px] pr-5 ">
+      <div className=" bg-[#F9F9F9] w-full small:pl-5 mid:pl-[80px] large:pl-[50px] pr-5 ">
         <Navbar />
         <div
-          className={`grid grid-cols-1 large:grid-cols-6 grid-flow-row-dense ${
+          className={` mid:grid mid:grid-cols-1 large:grid-cols-6 grid-flow-row-dense ${
             open ? "gap-6" : " gap-0 large:gap-28"
           }`}
         >
-          <Hero />
-          <ToDo/>
-          <Appointments />
-          <Covid />
+          <div className="col-span-4 order-1">
+            <Hero />
+          </div>
+          <div className={`order-2  large:order-3 col-span-1 mid:col-span-2 large:col-span-4 ${open ? ' mt-5 large:-mt-24' : ' mt-10 large:-mt-48'} `}>
+            <ToDo />
+          </div>
+          <div className={` order-3 col-span-1 mid:col-span-2  large:order-2 small:mt-10 mid:mt-0  ${open ? ' -mt-5 large:-mt-0' : ' mt-0 large:-mt-0'}`}>
+            <Appointments />
+          </div>
+          <div className={` order-4 col-span-1 mid:col-span-4 large:col-span-2  ${open ? ' -mt-5 large:mt-0' : ' mt-0 large:-mt-20'}`}>
+            <Covid />
+          </div>
         </div>
       </div>
     </div>
