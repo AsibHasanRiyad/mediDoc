@@ -49,7 +49,7 @@ const Cards = () => {
     },
   ];
   return (
-    <div className=" grid grid-cols-2 mid:grid-cols-4 gap-6 mt-8" >
+    <div className=" grid grid-cols-2 mid:grid-cols-4 gap-6 mt-8 small:px-5 mid:px-0" >
       {cards.map((card) => (
         <div  key={card.id}>
           <div className=" bg-white shadow-md px-3 py-5 shadow-[#b8b7b7] rounded-md">

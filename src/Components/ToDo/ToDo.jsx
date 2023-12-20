@@ -1,6 +1,6 @@
 const ToDo = () => {
   return (
-    <div className="bg-white max-h-[570px] overflow-scroll shadow p-5 shadow-[#b8b7b7] rounded-md mr-0  mid:mr-10 large:mr-0 block ">
+    <div className="bg-white max-h-[570px] overflow-scroll shadow p-5 shadow-[#b8b7b7] rounded-md mr-0   large:mr-0 block ">
       <h1 className=" text-[18px] font-medium text-[#2E1619] pb-2">
         TO-DO-LIST
       </h1>

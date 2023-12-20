@@ -11,12 +11,12 @@ const Covid = () => {
           <h1 className=" text-[#8A8686]">Thursday 10:00:00 AM</h1>
         </div>
       </div>
-      <div className=" flex justify-between items-center mt-4 gap-10 large:gap-0">
+      <div className=" flex flex-col mid:flex-row justify-between items-center mt-4 gap-10 large:gap-0">
         <div>
           <img className=" h-fit" src="/public/assets/Svg_sample2.png" alt="" />
         </div>
-        <div className=" bg-gradient-to-r from-[#FF7594] to-[#FF7C65] h-full text-white text-[14px] px-4 py-6 rounded-md text-center leading-10 max-h-[200px] overflow-scroll w-full ">
-          <div className=" grid grid-cols-2 gap-5 large:gap-0 large:grid-cols-1">
+        <div className=" bg-gradient-to-r from-[#FF7594] to-[#FF7C65] h-full text-white text-[14px] px-4 py-6 rounded-md text-center leading-10 mid:max-h-[200px] overflow-scroll w-48 mid:w-full ">
+          <div className=" grid grid-cols-1 mid:grid-cols-2 gap-5 large:gap-0 large:grid-cols-1">
             <div>
               <h1>Infection Number</h1>
               <h1 className=" text-3xl font-medium">500</h1>

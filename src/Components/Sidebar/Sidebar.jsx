@@ -28,8 +28,8 @@ const Sidebar = () => {
               ? "fixed"
               : "relative",
         }}
-        className={`bg-white min-h-screen relative  duration-300 z-20 hidden mid:inline ${
-          open ? "w-[270px]" : " w-[70px] "
+        className={`bg-white min-h-screen relative  duration-300 z-20 mid:inline ${
+          open ? "w-[270px]" : " w-0 mid:w-[70px] "
         }`}
       >
         {open ? (
@@ -40,7 +40,7 @@ const Sidebar = () => {
         ) : (
           <FiMenu
             onClick={() => setOpen(true)}
-            className=" text-4xl p-1 text-[#FF7594] shadow-md bg-white rounded-full absolute right-4 top-5 cursor-pointer"
+            className=" text-4xl p-1 text-[#FF7594] shadow-md bg-white rounded-md absolute right-4 top-5 cursor-pointer"
           />
         )}
         <div className={`flex items-center m-5 gap-6   ${!open && "scale-0"}`}>
@@ -73,7 +73,7 @@ const Sidebar = () => {
 
         {/* appointment button */}
         {!open ? (
-          <div className=" mt-48">
+          <div className=" mt-48 small:hidden mid:inline">
             <div
               className={`p-2 w-10 h-10 bg-[#FF7C65] rounded-full m-4 flex flex-col gap-6`}
             >
@@ -92,23 +92,26 @@ const Sidebar = () => {
       </div>
 
       {/* Content */}
-      <div className=" bg-[#F9F9F9] w-full small:pl-5 mid:pl-[80px] large:pl-[50px] pr-5 ">
+      <div className=" bg-[#F9F9F9] w-full small:pl-0 mid:pl-[100px] large:pl-[50px] pr-0 mid:pr-10 pb-10">
         <Navbar />
+
+  
+        
         <div
           className={` mid:grid mid:grid-cols-1 large:grid-cols-6 grid-flow-row-dense ${
             open ? "gap-6" : " gap-0 large:gap-28"
           }`}
         >
           <div className="col-span-4 order-1">
-            <Hero />
+            <Hero setOpen={setOpen} />
           </div>
-          <div className={`order-2  large:order-3 col-span-1 mid:col-span-2 large:col-span-4 ${open ? ' mt-5 large:-mt-24' : ' mt-10 large:-mt-48'} `}>
+          <div className={`order-2 small:px-5 mid:px-0 mid:mr-5 large:mr-0  large:order-3 col-span-1 mid:col-span-2 large:col-span-4 ${open ? ' mt-5 large:-mt-24' : ' mt-10 large:-mt-48'} `}>
             <ToDo />
           </div>
-          <div className={` order-3 col-span-1 mid:col-span-2  large:order-2 small:mt-10 mid:mt-0  ${open ? ' -mt-5 large:-mt-0' : ' mt-0 large:-mt-0'}`}>
+          <div className={` order-3 small:px-5 mid:px-0 col-span-1 mid:col-span-2  large:order-2 small:mt-10 mid:mt-0  ${open ? ' -mt-5 large:-mt-0' : ' mt-0 large:-mt-0'}`}>
             <Appointments />
           </div>
-          <div className={` order-4 col-span-1 mid:col-span-4 large:col-span-2  ${open ? ' -mt-5 large:mt-0' : ' mt-0 large:-mt-20'}`}>
+          <div className={` order-4 small:px-5 mid:px-0 col-span-1 mid:col-span-4 large:col-span-2  ${open ? ' -mt-5 large:mt-0' : ' mt-0 large:-mt-20'}`}>
             <Covid />
           </div>
         </div>
