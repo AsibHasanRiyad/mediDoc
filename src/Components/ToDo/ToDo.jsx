@@ -1,6 +1,6 @@
 const ToDo = () => {
   return (
-    <div className="bg-white shadow p-5 shadow-[#b8b7b7] rounded-md mt-8">
+    <div className="bg-white max-h-[570px] overflow-scroll shadow p-5 shadow-[#b8b7b7] rounded-md order-2  large:order-3 col-span-2 large:col-span-4 mt-10 large:mt-0 mr-10 large:mr-0 ">
       <h1 className=" text-[18px] font-medium text-[#2E1619] pb-2">
         TO-DO-LIST
       </h1>
@@ -30,7 +30,7 @@ const ToDo = () => {
       {/* select all */}
       <div className=" flex justify-between items-center mt-6">
         <h1 className=" flex items-center gap-3">
-          <input type="checkbox" checked="checked" className="checkbox hover:checkbox-error" />
+          <input type="checkbox" disabled className="checkbox " />
           Select All
         </h1>
         <button className=" bg-gradient-to-r from-[#FF7594] to-[#FF7C65] flex items-center gap-1 p-3 rounded-md w-28 justify-center text-white">
@@ -48,6 +48,24 @@ const ToDo = () => {
           </svg>
           Done
         </button>
+      </div>
+      <div className=" mt-7 font-medium text=[#2E1619] text-[18px] space-y-5">
+        <h1 className=" flex items-center gap-3">
+          <input type="checkbox" checked="checked" disabled className="checkbox " />
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit. <span className=" text-[#E0E0E0]">Last Added: 10 sep 2022</span>
+        </h1>
+        <h1 className=" flex items-center gap-3 ">
+          <input type="checkbox" checked="checked" disabled className="checkbox " />
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit. <span className=" text-[#E0E0E0]">Last Added: 10 sep 2022</span>
+        </h1>
+        <h1 className=" flex items-center gap-3">
+          <input type="checkbox" checked="checked" disabled className="checkbox " />
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit. <span className=" text-[#E0E0E0]">Last Added: 10 sep 2022</span>
+        </h1>
+        <h1 className=" flex items-center gap-3">
+          <input type="checkbox" checked="checked" disabled className="checkbox " />
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit. <span className=" text-[#E0E0E0]">Last Added: 10 sep 2022</span>
+        </h1>
       </div>
     </div>
   );

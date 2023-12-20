@@ -6,6 +6,8 @@ import { MdHistory } from "react-icons/md";
 import Navbar from "../NavBar/Navbar";
 import Hero from "../Hero/Hero";
 import Appointments from "../Appoinments/Appointments";
+import Covid from "../Covid/Covid";
+import ToDo from "../ToDo/ToDo";
 
 const Sidebar = () => {
   const [open, setOpen] = useState(false);
@@ -18,7 +20,7 @@ const Sidebar = () => {
     // Add more items as needed
   ];
   return (
-    <div className=" flex">
+    <div className="flex">
       <div
         style={{
           position:
@@ -26,7 +28,7 @@ const Sidebar = () => {
               ? "fixed"
               : "relative",
         }}
-        className={`bg-white min-h-screen relative  duration-300 ${
+        className={`bg-white min-h-screen relative  duration-300 hidden mid:inline ${
           open ? "w-[270px]" : " w-[70px] "
         }`}
       >
@@ -38,7 +40,7 @@ const Sidebar = () => {
         ) : (
           <FiMenu
             onClick={() => setOpen(true)}
-            className=" text-4xl p-1 text-[#FF7594] shadow-md bg-white rounded-full absolute -right-4 top-5 cursor-pointer"
+            className=" text-4xl p-1 text-[#FF7594] shadow-md bg-white rounded-full absolute right-4 top-5 cursor-pointer"
           />
         )}
         <div className={`flex items-center m-5 gap-6   ${!open && "scale-0"}`}>
@@ -90,11 +92,17 @@ const Sidebar = () => {
       </div>
 
       {/* Content */}
-      <div className=" bg-[#F9F9F9] w-full pl-[80px] pr-5 ">
+      <div className=" bg-[#F9F9F9] w-full small:pl-0 mid:pl-[88px] large:pl-[100px] pr-5 ">
         <Navbar />
-        <div className={`grid grid-cols-1 large:grid-cols-3  ${open ? 'gap-6' : ' gap-0 large:gap-20'}`}>
+        <div
+          className={`grid grid-cols-1 large:grid-cols-6 grid-flow-row-dense ${
+            open ? "gap-6" : " gap-0 large:gap-28"
+          }`}
+        >
           <Hero />
+          <ToDo/>
           <Appointments />
+          <Covid />
         </div>
       </div>
     </div>

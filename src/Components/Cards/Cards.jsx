@@ -49,10 +49,10 @@ const Cards = () => {
     },
   ];
   return (
-    <div className=" grid grid-cols-2 mid:grid-cols-4 gap-6 mt-7" >
+    <div className=" grid grid-cols-2 mid:grid-cols-4 gap-6 mt-8" >
       {cards.map((card) => (
         <div  key={card.id}>
-          <div className=" bg-white shadow-md p-3 shadow-[#b8b7b7] rounded-md">
+          <div className=" bg-white shadow-md px-3 py-5 shadow-[#b8b7b7] rounded-md">
             <div className=" bg-[#ff2d2d99] p-2 w-10 h-10 rounded ">
               {/* <img src={card.logo} alt="" className="w-10 h-10" /> */}
               {card.logo}
