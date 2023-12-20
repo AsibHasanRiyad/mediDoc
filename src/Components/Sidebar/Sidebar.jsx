@@ -77,7 +77,7 @@ const Sidebar = () => {
         {!open ? (
           <div className=" mt-48 small:hidden mid:inline">
             <div
-              className={`p-2 w-10 h-10 bg-[#FF7C65] rounded-full m-4 flex flex-col gap-6`}
+              className={`p-2 w-10 h-10 bg-[#FF7C65] rounded-full m-4 mt-48 flex flex-col gap-6`}
             >
               <img src="/public/assets/Default.png" alt="" />
             </div>
