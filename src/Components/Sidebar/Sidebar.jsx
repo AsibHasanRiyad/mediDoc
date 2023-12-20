@@ -79,7 +79,7 @@ const Sidebar = () => {
             <div
               className={`p-2 w-10 h-10 bg-[#FF7C65] rounded-full m-4 mt-48 flex flex-col gap-6`}
             >
-              <img src="/public/assets/Default.png" alt="" />
+              <img src="https://i.ibb.co/d4tCWhH/Default.png" alt="" />
             </div>
           </div>
         ) : (
