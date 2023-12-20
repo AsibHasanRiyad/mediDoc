@@ -37,12 +37,12 @@ const Sidebar = () => {
         {open ? (
           <IoIosArrowBack
             onClick={() => setOpen(false)}
-            className=" text-4xl p-1 text-[#FF7594] shadow-md bg-white rounded-full absolute -right-4 top-5 cursor-pointer"
+            className=" text-4xl p-1 text-[#FF7594] dark:text-white dark:bg-[#FF7594] shadow-md bg-white rounded-full absolute -right-4 top-5 cursor-pointer"
           />
         ) : (
           <FiMenu
             onClick={() => setOpen(true)}
-            className=" text-4xl p-1 text-[#FF7594] shadow-md bg-white rounded-md absolute right-4 top-5 cursor-pointer"
+            className=" text-4xl p-1 text-[#FF7594] dark:text-white dark:bg-[#FF7594] shadow-md bg-white rounded-md absolute right-4 top-5 cursor-pointer"
           />
         )}
         <div className={`flex items-center m-5 gap-6   ${!open && "scale-0"}`}>
@@ -51,7 +51,7 @@ const Sidebar = () => {
             src="/public/assets/fluent_doctor-48-filled.png"
             alt=""
           />
-          <h1 className="text-2xl font-normal">
+          <h1 className="text-2xl dark:text-white font-normal">
             Medi<span className=" text-[#FF7594;]">Doc</span>
           </h1>
         </div>

@@ -16,7 +16,9 @@ const Navbar = ({ setOpen }) => {
           />
           <h1 className=" text-[18px] font-semibold text-white">Home</h1>
         </div>
-        <h1 className=" hidden mid:block text-2xl text-[#646F75]">Home</h1>
+        <h1 className=" hidden mid:block text-2xl dark:text-white text-[#646F75]">
+          Home
+        </h1>
       </div>
 
       {/* toggle and profile*/}
@@ -143,6 +145,18 @@ const Navbar = ({ setOpen }) => {
                     <stop offset="1" stopColor="#6878B1" />
                   </linearGradient>
                 </defs>
+              </svg>
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="20"
+                height="20"
+                viewBox="0 0 20 20"
+                fill="none"
+              >
+                <path
+                  d="M4.02514 7.7868C4.20137 7.60316 4.44036 7.5 4.68954 7.5C4.93873 7.5 5.17771 7.60316 5.35394 7.7868L10.0057 12.6356L14.6574 7.7868C14.8346 7.60837 15.072 7.50963 15.3184 7.51186C15.5648 7.5141 15.8005 7.61711 15.9748 7.79873C16.149 7.98035 16.2478 8.22603 16.25 8.48287C16.2521 8.7397 16.1574 8.98714 15.9862 9.17188L10.6701 14.7132C10.4938 14.8968 10.2549 15 10.0057 15C9.75649 15 9.5175 14.8968 9.34127 14.7132L4.02514 9.17188C3.84897 8.98819 3.75 8.73908 3.75 8.47934C3.75 8.2196 3.84897 7.97049 4.02514 7.7868Z"
+                  fill="#384449"
+                />
               </svg>
             </div>
           </div>

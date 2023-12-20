@@ -1,6 +1,6 @@
 const Covid = () => {
   return (
-    <div className="  bg-white shadow p-3 shadow-[#b8b7b7] text-[#2E1619] font-medium rounded-md overflow-scroll mt-10 large:mt-0 h-full">
+    <div className="  bg-white dark:bg-[#2D2322] shadow p-3 shadow-[#b8b7b7] dark:shadow-none text-[#2E1619] dark:text-white font-medium rounded-md overflow-scroll mt-10 large:mt-0 h-full">
       <div className=" flex justify-between">
         <h1>Covid-19 Updates</h1>
 
@@ -8,7 +8,7 @@ const Covid = () => {
           <h1>
             10 September 2022 <br />
           </h1>
-          <h1 className=" text-[#8A8686]">Thursday 10:00:00 AM</h1>
+          <h1 className=" text-[#8A8686] dark:text-white">Thursday 10:00:00 AM</h1>
         </div>
       </div>
       <div className=" flex flex-col mid:flex-row justify-between items-center mt-4 gap-10 large:gap-0">
