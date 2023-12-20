@@ -48,7 +48,7 @@ const Sidebar = () => {
         <div className={`flex items-center m-5 gap-6   ${!open && "scale-0"}`}>
           <img
             className=" w-9 h-9"
-            src="/public/assets/fluent_doctor-48-filled.png"
+            src="https://i.ibb.co/T8Z0crG/fluent-doctor-48-filled.png"
             alt=""
           />
           <h1 className="text-2xl dark:text-white font-normal">
