@@ -3,6 +3,7 @@
 const Appointments = () => {
   const appointments = [
     {
+      id:1,
       year: "2022",
       month: "Sep",
       date: "22",
@@ -10,8 +11,10 @@ const Appointments = () => {
       role: "Cardiologist",
       slot: "Morning",
       time: "10.00 AM",
+      color:'#FF9898'
     },
     {
+      id:2,
       year: "2022",
       month: "Sep",
       date: "22",
@@ -19,8 +22,10 @@ const Appointments = () => {
       role: "Cardiologist",
       slot: "Morning",
       time: "10.00 AM",
+      color:'#FFF598'
     },
     {
+      id:3,
       year: "2022",
       month: "Sep",
       date: "22",
@@ -28,8 +33,10 @@ const Appointments = () => {
       role: "Cardiologist",
       slot: "Morning",
       time: "10.00 AM",
+      color:'#98FFC1'
     },
     {
+      id:4,
       year: "2022",
       month: "Sep",
       date: "22",
@@ -37,12 +44,13 @@ const Appointments = () => {
       role: "Cardiologist",
       slot: "Morning",
       time: "10.00 AM",
+      color:'#98C7FF'
     },
   ];
   return (
     <div className="  mid:mt-10 large:mt-0">
-        <div className="bg-white shadow p-3 shadow-[#b8b7b7] rounded-md h-[570px] overflow-scroll ">
-      <h1>Upcoming Appointments</h1>
+        <div className="bg-white dark:bg-[#2D2322]  shadow p-3 shadow-[#b8b7b7] rounded-md h-[570px] overflow-scroll ">
+      <h1 >Upcoming Appointments</h1>
       {/* appointments */}
       <div className=" mt-6">
         {appointments.map((appointment) => (
@@ -51,7 +59,11 @@ const Appointments = () => {
             className="relative border-s border-gray-200 dark:border-gray-700"
           >
             <li className="mb-10 ms-4">
-              <div className="absolute w-3 h-3 bg-[#98FFC1] rounded-full mt-10 -start-1.5 border border-white dark:border-gray-900 dark:bg-gray-700"></div>
+              <div 
+              style={{
+                backgroundColor: appointment.color
+              }}
+              className="absolute w-3 h-3 rounded-full mt-10 -start-1.5 border border-white dark:border-gray-900 dark:bg-gray-700"></div>
               <time className="mb-1 text-sm font-normal leading-none text-gray-400 dark:text-gray-500">
                 <div className=" flex">
                   <div className=" text-[#384449] text-[20px] font-medium border border-[#EDEBEB] p-3 rounded-2xl flex flex-col justify-center items-center">

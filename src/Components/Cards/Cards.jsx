@@ -8,6 +8,7 @@ const Cards = () => {
       title: "Pulse Count",
       bpm: "60 bpm",
       status: "Normal",
+      color:'#03922B'
     },
     {
       id: 2,
@@ -17,7 +18,8 @@ const Cards = () => {
     </svg>,
       title: "Pulse Count",
       bpm: "60 bpm",
-      status: "Normal",
+      status: "Slightly Higher",
+      color:'#82AB0D'
     },
     {
       id: 3,
@@ -34,7 +36,8 @@ const Cards = () => {
     </svg>,
       title: "Pulse Count",
       bpm: "60 bpm",
-      status: "Normal",
+      status: "Slightly Higher",
+      color:'#82AB0D'
     },
     {
       id: 4,
@@ -46,22 +49,22 @@ const Cards = () => {
       title: "Pulse Count",
       bpm: "60 bpm",
       status: "Normal",
+      color:'#03922B'
     },
   ];
   return (
-    <div className=" grid grid-cols-2 mid:grid-cols-4 gap-6 mt-8 small:px-5 mid:px-0" >
+    <div className=" grid grid-cols-2 mid:grid-cols-4 gap-10 mt-8 small:px-5 mid:px-0" >
       {cards.map((card) => (
         <div  key={card.id}>
-          <div className=" bg-white shadow-md px-3 py-5 shadow-[#b8b7b7] rounded-md">
+          <div className=" bg-white dark:bg-[#2D2322] shadow-md px-3 py-5 shadow-[#b8b7b7] dark:shadow-none rounded-md">
             <div className=" bg-[#ff2d2d99] p-2 w-10 h-10 rounded ">
-              {/* <img src={card.logo} alt="" className="w-10 h-10" /> */}
               {card.logo}
             </div>
             <div className="flex flex-col gap-2">
-              <h1 className=" text-sm mt-2 text-[#2E1619] font-semibold">
+              <h1 className=" text-sm mt-2 text-[#2E1619] dark:text-[#D1D5DB] font-semibold">
                 {card.title}
               </h1>
-              <h1 className="text-2xl text-[#4A3D3F] font-medium">
+              <h1 className="text-2xl text-[#4A3D3F] dark:text-[#D1D5DB] font-medium">
                 {card.bpm}
               </h1>
               <div className=" flex items-center gap-2">
@@ -77,7 +80,9 @@ const Cards = () => {
                     fill="#2E1619"
                   />
                 </svg>
-                <h1 className="text-lg text-[#03922B] font-medium">
+                <h1 
+                style={{ color: card.color }} 
+                className="text-sm font-medium">
                   {card.status}
                 </h1>
               </div>

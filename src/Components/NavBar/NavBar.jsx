@@ -1,49 +1,169 @@
+/* eslint-disable react/prop-types */
+import { FiMenu } from "react-icons/fi";
 import Toggler from "../Toggler/Toggler";
 
+const Navbar = ({ setOpen }) => {
+  const handelOpen = () => {
+    setOpen(true);
+  };
+  return (
+    <div className=" small:bg-gradient-to-r small:from-[#FF7594] small:via-[#FF797B] small:to-[#FF7C65] mid:bg-gradient-to-r mid:from-[##F9F9F9] mid:via-[##F9F9F9] mid:to-[##F9F9F9]  flex justify-between items-center pr-4 pt-2 pb-4  ">
+      <div>
+        <div className=" flex mid:hidden gap-2 ml-4 items-center">
+          <FiMenu
+            onClick={() => handelOpen()}
+            className=" text-4xl p-1 text-[#FF7594] shadow-md bg-white rounded-md  cursor-pointer"
+          />
+          <h1 className=" text-[18px] font-semibold text-white">Home</h1>
+        </div>
+        <h1 className=" hidden mid:block text-2xl text-[#646F75]">Home</h1>
+      </div>
 
-const Navbar = () => {
-    return (
-        <div className=" hidden mid:flex justify-between items-center pr-4 py-4  ">
-          <button className=" text-xl text-[#646F75]">Home</button>
+      {/* toggle and profile*/}
+      <div className=" flex justify-center item-center gap-3 mt-4">
+        <Toggler />
 
-          {/* toggle and profile*/}
-          <div className=" flex justify-center item-center gap-3">
-            <Toggler />
-
-            <div className="dropdown dropdown-end">
-              <div
-                tabIndex={0}
-                role="button"
-                className="btn btn-ghost btn-circle avatar"
+        <div className="dropdown dropdown-end">
+          <div
+            tabIndex={0}
+            role="button"
+            className="btn btn-ghost btn-circle avatar"
+          >
+            <div className="w-20 rounded-full">
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="48"
+                height="48"
+                viewBox="0 0 48 48"
+                fill="none"
               >
-                <div className="w-10 rounded-full">
-                  <img
-                    alt="Tailwind CSS Navbar component"
-                    src="https://daisyui.com/images/stock/photo-1534528741775-53994a69daeb.jpg"
-                  />
-                </div>
-              </div>
-              <ul
-                tabIndex={0}
-                className="menu menu-sm dropdown-content mt-3 z-[1] p-2 shadow bg-base-100 rounded-box w-52"
-              >
-                <li>
-                  <a className="justify-between">
-                    Profile
-                    <span className="badge">New</span>
-                  </a>
-                </li>
-                <li>
-                  <a>Settings</a>
-                </li>
-                <li>
-                  <a>Logout</a>
-                </li>
-              </ul>
+                <rect
+                  x="0.5"
+                  y="0.5"
+                  width="47"
+                  height="47"
+                  rx="23.5"
+                  fill="white"
+                />
+                <rect
+                  x="0.5"
+                  y="0.5"
+                  width="47"
+                  height="47"
+                  rx="23.5"
+                  stroke="#FFF4F4"
+                />
+                <path
+                  d="M40.0207 37.9792C30.5833 45.2457 17.4199 45.1876 8.04706 37.838L14.9167 34.6177C15.2439 34.464 15.5579 34.2836 15.8555 34.0785C15.9459 34.0163 16.0362 33.9514 16.1224 33.8836C16.87 33.3116 17.4854 32.5849 17.9266 31.7533C18.2601 31.1143 18.4817 30.4229 18.5816 29.709C18.6506 29.2459 18.6855 28.7783 18.6861 28.31C18.6861 27.5025 18.6424 26.6949 18.6339 25.886C18.6282 25.438 18.6235 24.9905 18.6198 24.5434L18.9021 24.6846L19.6362 25.0643L19.9765 25.1222L23.9125 25.7914L28.3059 26.5396L28.4386 31.0573L28.4824 32.534L28.5035 33.2512V33.2977L30.2118 33.9923L40.0207 37.9792Z"
+                  fill="#DE8276"
+                />
+                <path
+                  d="M28.4753 33.0168C27.99 33.1003 27.4908 33.0229 27.0536 32.7966L18.6296 25.91C18.6197 25.5909 18.6113 25.9255 18.607 25.6064C18.6014 25.1584 18.5967 24.7109 18.5929 24.2639L18.8753 24.405L19.6094 24.7848L19.9496 24.8427L23.8856 25.5119L28.279 26.2601L28.4117 30.7777L28.4555 32.2544L28.4767 32.9716V33.0182L28.4753 33.0168Z"
+                  fill="#A76962"
+                />
+                <path
+                  d="M32.8234 20.7415C32.6039 20.9711 32.3633 21.1795 32.1048 21.3641C30.6365 22.4272 28.677 22.7759 27.0027 23.349C26.2968 23.5904 18.6422 25.766 18.6422 26.2389C18.6422 26.1359 17.8926 25.3919 16.9481 24.4883C13.6905 21.3684 12.6045 16.6079 14.1867 12.3839C15.7269 8.33633 20.637 5.54668 24.7495 4.90151C26.7076 4.59515 29.0314 4.42433 30.8398 5.36315C31.7645 5.84457 32.534 6.54621 33.2398 7.3241C33.4601 7.56974 33.6737 7.82057 33.8808 8.07657C33.9697 8.18386 34.0573 8.29115 34.1434 8.39986C37.358 12.4375 36.2187 17.174 32.8234 20.7415Z"
+                  fill="url(#paint0_linear_1_19944)"
+                />
+                <path
+                  d="M32.8236 20.7415C32.6041 20.9711 32.3636 21.1795 32.1051 21.3641C32.0448 21.2591 31.9906 21.1507 31.9427 21.0394C31.57 20.1924 31.378 19.2733 31.2368 18.3571C31.017 17.0237 30.8666 15.6797 30.7865 14.3307C30.658 12.1651 29.7333 11.0907 31.5728 9.40224C32.2348 8.79554 33.0232 8.34327 33.8811 8.078C33.97 8.1853 34.0575 8.29259 34.1436 8.4013C37.3582 12.4375 36.2189 17.174 32.8236 20.7415Z"
+                  fill="url(#paint1_linear_1_19944)"
+                />
+                <ellipse
+                  cx="17.2304"
+                  cy="20.5933"
+                  rx="2.4"
+                  ry="2.4"
+                  fill="#E18477"
+                />
+                <ellipse
+                  cx="17.9929"
+                  cy="20.5933"
+                  rx="2.1487"
+                  ry="2.14871"
+                  fill="#A76962"
+                />
+                <path
+                  d="M18.1723 18.3175C18.2895 19.8507 18.2853 21.7227 18.3262 22.2705C18.4326 23.6436 18.538 25.0164 18.6424 26.3886L28.0222 31.8676C29.3684 32.3708 30.8766 31.7689 31.5064 30.4771C32.8561 27.7128 35.0217 23.3476 34.7366 21.7241C34.313 19.3241 33.1836 18.4771 33.1836 18.4771L33.6537 15.662C34.1295 12.8004 33.1483 10.0912 29.8053 9.77777C29.0994 9.71283 28.313 9.84694 27.8937 10.4102C26.7643 11.9293 27.4151 13.7985 25.7196 15.2102C23.6613 16.9086 19.0688 17.6498 17.993 16.2789C17.993 16.2789 18.0919 17.2488 18.1723 18.3175Z"
+                  fill="#DE8276"
+                />
+                <path
+                  d="M25.2114 24.3062C25.8897 25.0637 26.8196 25.5497 27.8288 25.6742"
+                  stroke="#00214E"
+                  strokeWidth="0.884354"
+                />
+                <path
+                  d="M28.5456 17.6413C28.5343 17.6907 30.4318 22.742 30.4318 22.742L27.899 22.8648"
+                  stroke="#00214E"
+                  strokeWidth="0.884354"
+                />
+                <path
+                  d="M22.5489 16.6615C23.8558 16.3912 25.2001 16.353 26.5202 16.5486"
+                  stroke="#00214E"
+                  strokeWidth="0.884354"
+                />
+                <path
+                  d="M30.8854 16.6799C31.6922 16.4919 32.5239 16.4342 33.3489 16.509"
+                  stroke="#00214E"
+                  strokeWidth="0.884354"
+                />
+                <path
+                  d="M40.0207 37.9792C30.5833 45.2457 17.4199 45.1876 8.04706 37.838L14.9167 34.6178C15.2439 34.464 15.5579 34.2836 15.8555 34.0785C15.9459 34.0163 16.0362 33.9514 16.1224 33.8836C16.87 33.3116 17.4854 32.5849 17.9266 31.7533C18.2601 31.1143 18.4817 30.4229 18.5816 29.709C18.6814 29.8057 18.786 29.8971 18.8951 29.9829C19.7607 30.623 20.7001 31.1567 21.6932 31.5726C22.1753 31.7737 22.6683 31.9476 23.1699 32.0935C24.681 32.5342 26.2588 32.701 27.8287 32.5862C28.0461 32.5693 28.2649 32.5481 28.4824 32.5326L28.5035 33.2498V33.2963L30.2118 33.9909L40.0207 37.9792Z"
+                  fill="#00214E"
+                />
+                <path
+                  d="M24.473 18.2484C25.3342 18.2484 25.3342 19.5726 24.473 19.5796H24.4335C23.5709 19.5796 23.5709 18.2554 24.4335 18.2484H24.4716H24.473Z"
+                  fill="#00214E"
+                />
+                <path
+                  d="M31.55 18.0521C32.3491 18.0591 32.3491 19.2803 31.55 19.2874H31.5133C30.7142 19.2874 30.7142 18.0591 31.5133 18.0521H31.55Z"
+                  fill="#00214E"
+                />
+                <defs>
+                  <linearGradient
+                    id="paint0_linear_1_19944"
+                    x1="13.461"
+                    y1="26.2444"
+                    x2="36.0464"
+                    y2="26.2444"
+                    gradientUnits="userSpaceOnUse"
+                  >
+                    <stop stopColor="#16243F" />
+                    <stop offset="1" stopColor="#6878B1" />
+                  </linearGradient>
+                  <linearGradient
+                    id="paint1_linear_1_19944"
+                    x1="26.7629"
+                    y1="16.8119"
+                    x2="36.2326"
+                    y2="19.4986"
+                    gradientUnits="userSpaceOnUse"
+                  >
+                    <stop stopColor="#16243F" />
+                    <stop offset="1" stopColor="#6878B1" />
+                  </linearGradient>
+                </defs>
+              </svg>
             </div>
           </div>
+          <ul
+            tabIndex={0}
+            className="menu menu-sm dropdown-content mt-3 z-[1] p-2 shadow bg-base-100 rounded-box w-52"
+          >
+            <li>
+              <a className="justify-between">Asib Hasan Riyad</a>
+            </li>
+            <li>
+              <a>Settings</a>
+            </li>
+            <li>
+              <a>Logout</a>
+            </li>
+          </ul>
         </div>
-    );
+      </div>
+    </div>
+  );
 };
 
 export default Navbar;

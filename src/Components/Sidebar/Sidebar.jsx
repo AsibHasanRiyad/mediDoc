@@ -1,6 +1,7 @@
-import { useState } from "react";
+import {  useState } from "react";
 import { IoIosArrowBack } from "react-icons/io";
-import { FiMenu, FiHome, FiUser, FiCalendar } from "react-icons/fi";
+import { FiMenu, FiHome, FiUser } from "react-icons/fi";
+import { IoCalendarOutline } from "react-icons/io5";
 import { RiSettings4Line } from "react-icons/ri";
 import { MdHistory } from "react-icons/md";
 import Navbar from "../NavBar/Navbar";
@@ -14,11 +15,12 @@ const Sidebar = () => {
   const iconData = [
     { icon: <FiHome />, name: "Home" },
     { icon: <FiUser />, name: "Patient Profile" },
-    { icon: <FiCalendar />, name: "Appointment" },
+    { icon: <IoCalendarOutline />, name: "Appointment" },
     { icon: <MdHistory />, name: "Medical History" },
     { icon: <RiSettings4Line />, name: "Settings" },
     // Add more items as needed
   ];
+
   return (
     <div className="flex">
       <div
@@ -28,7 +30,7 @@ const Sidebar = () => {
               ? "fixed"
               : "relative",
         }}
-        className={`bg-white min-h-screen relative  duration-300 z-20 mid:inline ${
+        className={`bg-white dark:bg-[#2E1619]  min-h-screen relative  duration-300 z-20 mid:inline ${
           open ? "w-[270px]" : " w-0 mid:w-[70px] "
         }`}
       >
@@ -57,7 +59,7 @@ const Sidebar = () => {
           {iconData.map((icon) => (
             <div
               key={icon.name}
-              className=" inline-flex text-[#2E1619] whitespace-nowrap cursor-pointer hover:text-[#FF7594] transition-all transform duration-300 items-center"
+              className=" inline-flex text-[#2E1619] dark:text-[#D1D5DB] whitespace-nowrap cursor-pointer hover:text-[#FF7594] dark:hover:text-[#FF7594] transition-all transform duration-300 items-center"
             >
               {icon.icon}
               <h1
@@ -92,8 +94,8 @@ const Sidebar = () => {
       </div>
 
       {/* Content */}
-      <div className=" bg-[#F9F9F9] w-full small:pl-0 mid:pl-[100px] large:pl-[50px] pr-0 mid:pr-10 pb-10">
-        <Navbar />
+      <div className=" bg-[#F9F9F9] dark:bg-[#150A09] w-full small:pl-0 mid:pl-[100px] large:pl-[50px] pr-0 mid:pr-10 pb-10">
+        <Navbar setOpen={setOpen} />
 
   
         
@@ -103,12 +105,12 @@ const Sidebar = () => {
           }`}
         >
           <div className="col-span-4 order-1">
-            <Hero setOpen={setOpen} />
+            <Hero  />
           </div>
           <div className={`order-2 small:px-5 mid:px-0 mid:mr-5 large:mr-0  large:order-3 col-span-1 mid:col-span-2 large:col-span-4 ${open ? ' mt-5 large:-mt-24' : ' mt-10 large:-mt-48'} `}>
             <ToDo />
           </div>
-          <div className={` order-3 small:px-5 mid:px-0 col-span-1 mid:col-span-2  large:order-2 small:mt-10 mid:mt-0  ${open ? ' -mt-5 large:-mt-0' : ' mt-0 large:-mt-0'}`}>
+          <div className={` order-3 small:px-5 mid:px-0 col-span-1 mid:col-span-2  large:order-2 small:mt-10 mid:mt-0  ${open ? ' -mt-5 mid:-mt-5 large:-mt-0' : ' mt-0 large:-mt-0'}`}>
             <Appointments />
           </div>
           <div className={` order-4 small:px-5 mid:px-0 col-span-1 mid:col-span-4 large:col-span-2  ${open ? ' -mt-5 large:mt-0' : ' mt-0 large:-mt-20'}`}>
